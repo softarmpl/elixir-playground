@@ -1,0 +1,19 @@
+version: "3.5"
+
+services:
+    elixirbridge:
+      build: 
+        context: .
+      volumes:
+        - ./elixirbridge:/elixirbridge
+      command: ['mix', 'phx.server']
+
+      ports:
+        - "4010:4000"
+      depends_on: 
+        - db
+
+    db:
+      image: postgres
+      restart: always
+
