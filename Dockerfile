@@ -22,4 +22,4 @@ RUN curl https://cli-assets.heroku.com/install.sh | sh
 
 RUN mkdir /elixirbridge
 
-WORKDIR /elixirbridge/test_app
+WORKDIR /elixirbridge/chatter
